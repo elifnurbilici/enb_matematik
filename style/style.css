@@ -217,28 +217,40 @@ ul li {
 
 /* Responsive düzen (mobil uyumlu) */
 @media (max-width: 768px) {
+  /* Kamp günlerinin düzeni */
   .camp-day {
     width: calc(50% - 20px); /* 2'li düzen */
   }
   
+  /* Header düzeni */
   .header-content {
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Logo ve navbar arasında boşluk */
+    gap: 10px;
   }
   
+  /* Logo boyutu */
   .logo img {
     height: 60px; /* Mobilde daha küçük logo */
   }
   
+  /* Navbar yatay kalacak şekilde düzenleme */
   .navbar ul {
-    flex-direction: column;
+    flex-direction: row; /* Yatay düzen için */
+    flex-wrap: wrap; /* Gerekirse alt satıra geçer */
+    justify-content: center;
     align-items: center;
-    padding: 0;
-    gap: 10px; /* Menü öğeleri arası boşluk */
+    gap: 15px; /* Menü öğeleri arası boşluk */
+    padding: 5px 0;
+    margin: 0;
   }
   
-  /* Header'ın daha az yer kaplaması */
+  .navbar a {
+    font-size: 0.95rem; /* Biraz daha küçük yazı boyutu */
+    padding: 5px 10px; /* Tıklanabilir alan için padding */
+  }
+  
+  /* Header padding ayarı */
   header {
     padding: 10px 15px;
   }
@@ -247,11 +259,21 @@ ul li {
 /* Daha küçük mobil ekranlar için */
 @media (max-width: 500px) {
   .camp-day {
-    width: 100%;
+    width: 100%; /* Tek sütun düzeni */
   }
   
   .logo img {
     height: 50px; /* En küçük ekranlarda daha da küçük logo */
+  }
+  
+  /* En küçük ekranlarda navbar düzeni */
+  .navbar ul {
+    gap: 8px; /* Daha az boşluk */
+  }
+  
+  .navbar a {
+    font-size: 0.85rem; /* Daha küçük font */
+    padding: 3px 8px; /* Daha kompakt düğmeler */
   }
 }
 
