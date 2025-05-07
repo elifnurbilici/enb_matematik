@@ -220,20 +220,38 @@ ul li {
   .camp-day {
     width: calc(50% - 20px); /* 2'li düzen */
   }
-   .header-content {
+  
+  .header-content {
     flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Logo ve navbar arasında boşluk */
+  }
+  
+  .logo img {
+    height: 60px; /* Mobilde daha küçük logo */
   }
   
   .navbar ul {
     flex-direction: column;
     align-items: center;
     padding: 0;
+    gap: 10px; /* Menü öğeleri arası boşluk */
+  }
+  
+  /* Header'ın daha az yer kaplaması */
+  header {
+    padding: 10px 15px;
   }
 }
 
+/* Daha küçük mobil ekranlar için */
 @media (max-width: 500px) {
   .camp-day {
     width: 100%;
+  }
+  
+  .logo img {
+    height: 50px; /* En küçük ekranlarda daha da küçük logo */
   }
 }
 
